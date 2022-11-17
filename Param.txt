@@ -1,0 +1,7 @@
+AND ( paam.location_id IN (:location) OR LEAST (:location) IS NULL)
+			AND ( paam.legal_entity_id IN (:property) OR LEAST (:property) IS NULL)	
+			AND ( pgl.name IN (:Grade_Ladder) OR LEAST (:Grade_Ladder) IS NULL)			
+			
+			
+  
+   AND ppos.date_start <= :P_END_DATE AND paam.effective_end_date >= :P_START_DATE
